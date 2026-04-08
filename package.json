@@ -1,0 +1,43 @@
+{
+  "name": "industrial-probe",
+  "version": "0.1.0",
+  "description": "Zero-install CLI for testing industrial devices — Modbus, MQTT, OPC-UA",
+  "bin": {
+    "industrial-probe": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "type": "module",
+  "keywords": [
+    "modbus",
+    "plc",
+    "industrial",
+    "ics",
+    "mqtt",
+    "cli"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "cli-table3": "^0.6.5",
+    "commander": "^14.0.3",
+    "ink": "^7.0.0",
+    "ink-select-input": "^6.2.0",
+    "ink-text-input": "^6.0.0",
+    "modbus-serial": "^8.0.25",
+    "mqtt": "^5.15.1",
+    "ora": "^9.3.0",
+    "react": "^19.2.4",
+    "yaml": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "@types/react": "^19.2.14",
+    "@types/serialport": "^10.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}

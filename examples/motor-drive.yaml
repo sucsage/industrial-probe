@@ -1,0 +1,36 @@
+name: "Motor Drive FAT Test"
+host: 192.168.1.10
+port: 502
+protocol: modbus-tcp
+unitId: 1
+
+tests:
+  - name: "Speed Setpoint"
+    register: 40001
+    type: holding
+    expect:
+      between: [0, 1500]
+
+  - name: "Fault Code"
+    register: 40002
+    type: holding
+    expect:
+      equals: 0
+
+  - name: "Motor Temperature"
+    register: 40010
+    type: holding
+    expect:
+      lessThan: 80
+
+  - name: "Run Status"
+    register: 40020
+    type: holding
+    expect:
+      equals: 1
+
+  - name: "Output Frequency"
+    register: 40030
+    type: holding
+    expect:
+      between: [45, 55]

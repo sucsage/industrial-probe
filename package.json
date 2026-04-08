@@ -1,23 +1,36 @@
 {
   "name": "industrial-probe",
   "version": "0.1.0",
-  "description": "Zero-install CLI for testing industrial devices — Modbus, MQTT, OPC-UA",
+  "description": "TUI for testing industrial devices — Modbus TCP/RTU, MQTT, with built-in simulator",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "industrial-probe": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "tsc",
     "dev": "tsx src/index.ts",
     "start": "node dist/index.js"
   },
   "type": "module",
+  "files": [
+    "dist",
+    "examples"
+  ],
   "keywords": [
     "modbus",
+    "modbus-tcp",
+    "modbus-rtu",
     "plc",
     "industrial",
     "ics",
     "mqtt",
-    "cli"
+    "rs485",
+    "tui",
+    "cli",
+    "simulator"
   ],
   "license": "MIT",
   "dependencies": {

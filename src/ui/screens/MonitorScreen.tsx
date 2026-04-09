@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Box, Text, useInput } from 'ink';
-import { Header } from '../components/Header';
-import { FormField } from '../components/FormField';
-import { ModbusClient, RegisterResult } from '../../protocols/modbus';
+import { Header } from '../components/Header.js';
+import { FormField } from '../components/FormField.js';
+import { ModbusClient, RegisterResult } from '../../protocols/modbus.js';
 
 type Phase = 'form' | 'connecting' | 'running' | 'error';
 

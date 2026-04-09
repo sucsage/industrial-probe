@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Box, Text, useInput } from 'ink';
-import { Header } from '../components/Header';
-import { FormField } from '../components/FormField';
-import { MqttClientWrapper, MqttMessage } from '../../protocols/mqtt';
+import { Header } from '../components/Header.js';
+import { FormField } from '../components/FormField.js';
+import { MqttClientWrapper, MqttMessage } from '../../protocols/mqtt.js';
 
 type Phase = 'form' | 'connecting' | 'live' | 'error';
 type Mode  = 'subscribe' | 'publish';

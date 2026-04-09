@@ -2,7 +2,7 @@ import { Command } from "commander";
 import chalk from "chalk";
 import { readFileSync } from "fs";
 import { parse } from "yaml";
-import { ModbusClient } from "../protocols/modbus";
+import { ModbusClient } from "../protocols/modbus.js";
 
 interface TestCase {
   name: string;

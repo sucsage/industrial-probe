@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Box, Text, useInput } from 'ink';
-import { Header }         from '../components/Header';
-import { FormField }      from '../components/FormField';
-import { DeviceRegistry } from '../../simulator/DeviceRegistry';
-import { ModbusTcpServer} from '../../simulator/ModbusTcpServer';
-import { ModbusRtuServer} from '../../simulator/ModbusRtuServer';
-import { MotorDrive }     from '../../simulator/devices/MotorDrive';
-import { ServoController }from '../../simulator/devices/ServoController';
-import { PlcDevice }      from '../../simulator/devices/PlcDevice';
-import { TempController } from '../../simulator/devices/TempController';
-import { Transmitter }    from '../../simulator/devices/Transmitter';
-import { SimDevice }      from '../../simulator/devices/types';
+import { Header }         from '../components/Header.js';
+import { FormField }      from '../components/FormField.js';
+import { DeviceRegistry } from '../../simulator/DeviceRegistry.js';
+import { ModbusTcpServer} from '../../simulator/ModbusTcpServer.js';
+import { ModbusRtuServer} from '../../simulator/ModbusRtuServer.js';
+import { MotorDrive }     from '../../simulator/devices/MotorDrive.js';
+import { ServoController }from '../../simulator/devices/ServoController.js';
+import { PlcDevice }      from '../../simulator/devices/PlcDevice.js';
+import { TempController } from '../../simulator/devices/TempController.js';
+import { Transmitter }    from '../../simulator/devices/Transmitter.js';
+import { SimDevice }      from '../../simulator/devices/types.js';
 
 type Phase = 'config' | 'running' | 'error';
 

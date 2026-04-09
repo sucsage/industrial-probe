@@ -1,16 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Box, Text, useInput } from 'ink';
 import SelectInput from 'ink-select-input';
-import { Header } from '../components/Header';
-import { FormField } from '../components/FormField';
-import { ModbusRTUClient } from '../../protocols/modbus';
-import { RtuScanPanel }    from './rtu/RtuScanPanel';
-import { RtuReadPanel }    from './rtu/RtuReadPanel';
-import { RtuWritePanel }   from './rtu/RtuWritePanel';
-import { RtuMonitorPanel } from './rtu/RtuMonitorPanel';
-import { RtuMapPanel }     from './rtu/RtuMapPanel';
-import { RtuTestPanel }    from './rtu/RtuTestPanel';
-import { RtuLogPanel }     from './rtu/RtuLogPanel';
+import { Header } from '../components/Header.js';
+import { FormField } from '../components/FormField.js';
+import { ModbusRTUClient } from '../../protocols/modbus.js';
+import { RtuScanPanel }    from './rtu/RtuScanPanel.js';
+import { RtuReadPanel }    from './rtu/RtuReadPanel.js';
+import { RtuWritePanel }   from './rtu/RtuWritePanel.js';
+import { RtuMonitorPanel } from './rtu/RtuMonitorPanel.js';
+import { RtuMapPanel }     from './rtu/RtuMapPanel.js';
+import { RtuTestPanel }    from './rtu/RtuTestPanel.js';
+import { RtuLogPanel }     from './rtu/RtuLogPanel.js';
 
 type Phase     = 'form' | 'connecting' | 'hub' | 'error';
 type SubScreen = 'menu' | 'scan' | 'read' | 'write' | 'monitor' | 'regmap' | 'test' | 'log';

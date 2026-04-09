@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Box, Text, useInput } from 'ink';
 import { createWriteStream, WriteStream } from 'fs';
-import { Header } from '../components/Header';
-import { FormField } from '../components/FormField';
-import { ModbusClient } from '../../protocols/modbus';
+import { Header } from '../components/Header.js';
+import { FormField } from '../components/FormField.js';
+import { ModbusClient } from '../../protocols/modbus.js';
 
 type Phase = 'form' | 'running' | 'done' | 'error';
 

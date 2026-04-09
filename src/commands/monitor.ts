@@ -1,6 +1,6 @@
 import { Command } from "commander";
 import chalk from "chalk";
-import { ModbusClient } from "../protocols/modbus";
+import { ModbusClient } from "../protocols/modbus.js";
 
 export function monitorCommand(): Command {
   return new Command("monitor")

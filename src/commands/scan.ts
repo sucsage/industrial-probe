@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import chalk from "chalk";
 import ora from "ora";
-import { ModbusClient } from "../protocols/modbus";
+import { ModbusClient } from "../protocols/modbus.js";
 
 export function scanCommand(): Command {
   return new Command("scan")

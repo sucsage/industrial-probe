@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import chalk from "chalk";
 import { createWriteStream } from "fs";
-import { ModbusClient } from "../protocols/modbus";
+import { ModbusClient } from "../protocols/modbus.js";
 
 export function logCommand(): Command {
   return new Command("log")

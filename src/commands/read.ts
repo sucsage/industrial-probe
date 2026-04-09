@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import chalk from "chalk";
 import Table from "cli-table3";
-import { ModbusClient } from "../protocols/modbus";
+import { ModbusClient } from "../protocols/modbus.js";
 
 export function readCommand(): Command {
   return new Command("read")

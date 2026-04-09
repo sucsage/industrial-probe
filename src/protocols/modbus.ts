@@ -1,4 +1,18 @@
-import ModbusRTU from "modbus-serial";
+// modbus-serial ships CJS declarations incompatible with NodeNext module resolution
+import { createRequire } from "node:module";
+const _require = createRequire(import.meta.url);
+const ModbusRTU = _require("modbus-serial") as {
+  new (): {
+    setTimeout(ms: number): void;
+    connectTCP(host: string, opts: { port: number }): Promise<void>;
+    connectRTUBuffered(port: string, opts: { baudRate: number; dataBits?: number; parity?: string; stopBits?: number }): Promise<void>;
+    setID(id: number): void;
+    readHoldingRegisters(addr: number, count: number): Promise<{ data: number[] }>;
+    readCoils(addr: number, count: number): Promise<{ data: boolean[] }>;
+    writeRegister(addr: number, value: number): Promise<void>;
+    close(cb: () => void): void;
+  };
+};
 
 export interface ModbusOptions {
   host: string;
@@ -23,7 +37,7 @@ export interface RegisterResult {
 }
 
 export class ModbusClient {
-  private client: ModbusRTU;
+  private client: InstanceType<typeof ModbusRTU>;
   private opts: Required<ModbusOptions>;
 
   constructor(opts: ModbusOptions) {
@@ -74,7 +88,7 @@ export class ModbusClient {
 }
 
 export class ModbusRTUClient {
-  private client: ModbusRTU;
+  private client: InstanceType<typeof ModbusRTU>;
   private opts: Required<RTUOptions>;
 
   constructor(opts: RTUOptions) {

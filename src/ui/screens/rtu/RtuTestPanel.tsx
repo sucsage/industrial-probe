@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Box, Text, useInput } from 'ink';
 import { readFileSync } from 'fs';
 import { parse } from 'yaml';
-import { Header } from '../../components/Header';
-import { FormField } from '../../components/FormField';
-import { ModbusRTUClient } from '../../../protocols/modbus';
+import { Header } from '../../components/Header.js';
+import { FormField } from '../../components/FormField.js';
+import { ModbusRTUClient } from '../../../protocols/modbus.js';
 
 type Phase = 'form' | 'running' | 'done' | 'error';
 

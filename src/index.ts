@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { renderApp } from "./ui/App";
+import { renderApp } from "./ui/App.js";
 
 renderApp();

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { render, Box } from 'ink';
-import { StartupScreen }     from './screens/StartupScreen';
-import { Menu }              from './Menu';
-import { ScanScreen }        from './screens/ScanScreen';
-import { ReadScreen }        from './screens/ReadScreen';
-import { WriteScreen }       from './screens/WriteScreen';
-import { MonitorScreen }     from './screens/MonitorScreen';
-import { TestScreen }        from './screens/TestScreen';
-import { LogScreen }         from './screens/LogScreen';
-import { RtuScreen }         from './screens/RtuScreen';
-import { RegisterMapScreen } from './screens/RegisterMapScreen';
-import { MqttScreen }        from './screens/MqttScreen';
-import { SimulatorScreen }   from './screens/SimulatorScreen';
+import { StartupScreen }     from './screens/StartupScreen.js';
+import { Menu }              from './Menu.js';
+import { ScanScreen }        from './screens/ScanScreen.js';
+import { ReadScreen }        from './screens/ReadScreen.js';
+import { WriteScreen }       from './screens/WriteScreen.js';
+import { MonitorScreen }     from './screens/MonitorScreen.js';
+import { TestScreen }        from './screens/TestScreen.js';
+import { LogScreen }         from './screens/LogScreen.js';
+import { RtuScreen }         from './screens/RtuScreen.js';
+import { RegisterMapScreen } from './screens/RegisterMapScreen.js';
+import { MqttScreen }        from './screens/MqttScreen.js';
+import { SimulatorScreen }   from './screens/SimulatorScreen.js';
 
 type Screen =
   | 'startup'
